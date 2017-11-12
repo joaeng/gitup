@@ -1,9 +1,8 @@
 #!/bin/bash
-CURRENTEPOCTIME=`date +Y-%m-%d %T"`
+now=$(date +"%m-%d-%y")
 cd /home/joakim/sVt/
-
 git add .
-sudo git commit -m "ett beskrivande meddelande"
-git push --set-upstream origin master
+sudo git commit -m "Backup ${now}"
+git push
 
 exit
